@@ -7,34 +7,85 @@
 /* GLOBAL STYLES */
 body {
     background-color: $color-background-body;
+    font-family: Georgia, sans-serif;
+}
+
+h1 {
+    font-size: $h1-size;
+}
+h2 {
+    font-size: $h2-size;
+}
+h3 {
+    font-size: $h3-size;
+}
+h4 {
+    font-size: $h4-size;
 }
 
 .logo {
-
+    /* Float left */
 }
 
 .container {
-
+    /* Spacing: margin, padding */
+    padding: 10px;
 }
 
 header {
-    
+    /*  static at top of page
+           
+     */
+    background-color: $color-background-header;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
     nav {
+        /*  large screen: one line menu 
+            mobile: multi line menu
+        */
+        background-color: $color-background-nav;
+        margin-top: 10px;
+        ul {
+            list-style: none;
+            text-align: center;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                border: none;
+                display: block;
+                padding: 5px;
+                &:hover {
+                    background-color: #fff;
+                    color: $color-background-nav;
+                    border-bottom: 2px solid $color-background-nav;
+                }
+                .active {
 
+                }
+            }
+        }
     }
 }
 
 section {
     background-color: $color-background-content;
     article {
+        /* margin top and bottom */
+    }
+}
+
+#sidebar {
+    /* hidden by default */
+    background-color: $color-background-sidebar;
+    display: none;
+    #book-list {
 
     }
 }
 
-.sidebar {
-
-}
-
 footer {
-
+    background-color: $color-background-footer;
+    color: #fff;
 }

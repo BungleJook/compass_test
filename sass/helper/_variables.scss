@@ -1,14 +1,21 @@
 /* FONT */
 $font-size: 16px;
 
+$h1-size: 2em;
+$h2-size: 1.5em;
+$h3-size: 1.17em;
+$h4-size: 0.95em;
+$h5-size: 0.83em;
+$h6-size: 0.67em;
+
 /* COLOURS */
-$color-background-banner: #4090ff;
+$color-background-header: #4090ff;
 $color-background-nav: #00275e;
 
 $color-background-body: #fff;
 $color-background-content: #cfddf0;
 
-$color-background-sidebar: $color-background-banner;
+$color-background-sidebar: $color-background-header;
 $color-background-sidebar-content: #fff;
 
 $color-background-footer: $color-background-nav;
