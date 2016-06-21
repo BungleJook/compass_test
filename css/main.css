@@ -70,4 +70,97 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 8, ../sass/main.scss */
 body {
   background-color: #fff;
+  font-family: Georgia, sans-serif;
+}
+
+/* line 13, ../sass/main.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 16, ../sass/main.scss */
+h2 {
+  font-size: 1.5em;
+}
+
+/* line 19, ../sass/main.scss */
+h3 {
+  font-size: 1.17em;
+}
+
+/* line 22, ../sass/main.scss */
+h4 {
+  font-size: 0.95em;
+}
+
+/* line 26, ../sass/main.scss */
+.logo {
+  /* Float left */
+}
+
+/* line 30, ../sass/main.scss */
+.container {
+  /* Spacing: margin, padding */
+  padding: 10px;
+}
+
+/* line 35, ../sass/main.scss */
+header {
+  /*  static at top of page
+         
+   */
+  background-color: #4090ff;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+/* line 43, ../sass/main.scss */
+header nav {
+  /*  large screen: one line menu 
+      mobile: multi line menu
+  */
+  background-color: #00275e;
+  margin-top: 10px;
+}
+/* line 49, ../sass/main.scss */
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 52, ../sass/main.scss */
+header nav ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  display: block;
+  padding: 5px;
+}
+/* line 59, ../sass/main.scss */
+header nav ul a:hover {
+  background-color: #fff;
+  color: #00275e;
+  border-bottom: 2px solid #00275e;
+}
+
+/* line 72, ../sass/main.scss */
+section {
+  background-color: #cfddf0;
+}
+/* line 74, ../sass/main.scss */
+section article {
+  /* margin top and bottom */
+}
+
+/* line 79, ../sass/main.scss */
+#sidebar {
+  /* hidden by default */
+  background-color: #4090ff;
+  display: none;
+}
+
+/* line 88, ../sass/main.scss */
+footer {
+  background-color: #00275e;
+  color: #fff;
 }
