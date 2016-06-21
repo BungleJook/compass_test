@@ -71,3 +71,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background-color: #fff;
 }
+
+/* line 27, ../sass/main.scss */
+section {
+  background-color: #cfddf0;
+}
