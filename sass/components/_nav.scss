@@ -20,6 +20,7 @@ nav {
             border: none;
             display: block;
             padding: 5px;
+            @extend %button-transition;
             @include desktop {
                 padding: 10px;
             }
@@ -27,6 +28,7 @@ nav {
                 background-color: #fff;
                 color: $color-background-nav;
                 border-bottom: 2px solid transparent $color-background-nav;
+                @extend %button-transition;
             }
             .active {
 

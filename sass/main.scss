@@ -4,6 +4,8 @@
 
 @import "helpers/variables";
 
+@import "placeholders/animation";
+
 @import "mixins/media";
 
 @import "components/header";
@@ -36,17 +38,30 @@ h4 {
 }
 
 section {
-    background-color: $color-background-content;
-    article {
-        /* margin top and bottom */
+    background: #fff;
+    display: flex;
+    .column {
+        @include desktop { margin: 0 $column-spacing; }
     }
-}
-
-.main-content {
-    @include desktop {
-        background-color: #fff;
-        padding: 10px;
-        float: left;
-        width: 80%;
+    .main {
+        background: $color-background-content;
+        padding: 25px;
+        flex-grow: 5;
+        flex-shrink: 5;
+        flex-basis: 0;
+        article {
+            margin-bottom: 20px;
+        }
+        @include desktop {
+            margin: 30px;
+            border: 5px solid #000;
+            border-radius: 5px;
+        }
+    }
+    #sidebar {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        margin-right: 0;
     }
 }
