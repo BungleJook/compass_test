@@ -212,17 +212,33 @@ section {
   background: #fff;
   display: flex;
 }
-/* line 43, ../sass/main.scss */
-section .column {
-  margin: 0 5px;
+@media (min-width: 1024px) {
+  /* line 43, ../sass/main.scss */
+  section .column {
+    margin: 0 5px;
+  }
 }
 /* line 46, ../sass/main.scss */
 section .main {
+  background: #cfddf0;
+  padding: 25px;
   flex-grow: 5;
   flex-shrink: 5;
   flex-basis: 0;
 }
-/* line 51, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
+section .main article {
+  margin-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  /* line 46, ../sass/main.scss */
+  section .main {
+    margin: 30px;
+    border: 5px solid #000;
+    border-radius: 5px;
+  }
+}
+/* line 61, ../sass/main.scss */
 section #sidebar {
   flex-grow: 1;
   flex-shrink: 1;

@@ -41,12 +41,22 @@ section {
     background: #fff;
     display: flex;
     .column {
-        margin: 0 $column-spacing;
+        @include desktop { margin: 0 $column-spacing; }
     }
     .main {
+        background: $color-background-content;
+        padding: 25px;
         flex-grow: 5;
         flex-shrink: 5;
         flex-basis: 0;
+        article {
+            margin-bottom: 20px;
+        }
+        @include desktop {
+            margin: 30px;
+            border: 5px solid #000;
+            border-radius: 5px;
+        }
     }
     #sidebar {
         flex-grow: 1;
