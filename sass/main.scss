@@ -2,12 +2,19 @@
 @import "compass/reset";
 @import "compass/css3";
 
-@import "helper/variables";
+@import "helpers/variables";
+
+@import "mixins/media";
+
+@import "components/header";
+@import "components/nav";
+@import "components/sidebar";
+@import "components/footer";
 
 /* GLOBAL STYLES */
 body {
     background-color: $color-background-body;
-    font-family: Georgia, sans-serif;
+    font-family: 'Open Sans', Georgia, sans-serif;
 }
 
 h1 {
@@ -23,50 +30,9 @@ h4 {
     font-size: $h4-size;
 }
 
-.logo {
-    /* Float left */
-}
-
 .container {
     /* Spacing: margin, padding */
     padding: 10px;
-}
-
-header {
-    /*  static at top of page
-           
-     */
-    background-color: $color-background-header;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 10px;
-    nav {
-        /*  large screen: one line menu 
-            mobile: multi line menu
-        */
-        background-color: $color-background-nav;
-        margin-top: 10px;
-        ul {
-            list-style: none;
-            text-align: center;
-            a {
-                text-decoration: none;
-                text-transform: uppercase;
-                color: #fff;
-                border: none;
-                display: block;
-                padding: 5px;
-                &:hover {
-                    background-color: #fff;
-                    color: $color-background-nav;
-                    border-bottom: 2px solid $color-background-nav;
-                }
-                .active {
-
-                }
-            }
-        }
-    }
 }
 
 section {
@@ -76,16 +42,11 @@ section {
     }
 }
 
-#sidebar {
-    /* hidden by default */
-    background-color: $color-background-sidebar;
-    display: none;
-    #book-list {
-
+.main-content {
+    @include desktop {
+        background-color: #fff;
+        padding: 10px;
+        float: left;
+        width: 80%;
     }
-}
-
-footer {
-    background-color: $color-background-footer;
-    color: #fff;
 }

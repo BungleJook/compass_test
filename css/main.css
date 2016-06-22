@@ -66,45 +66,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* FONT */
 /* COLOURS */
-/* GLOBAL STYLES */
-/* line 8, ../sass/main.scss */
-body {
-  background-color: #fff;
-  font-family: Georgia, sans-serif;
-}
-
-/* line 13, ../sass/main.scss */
-h1 {
-  font-size: 2em;
-}
-
-/* line 16, ../sass/main.scss */
-h2 {
-  font-size: 1.5em;
-}
-
-/* line 19, ../sass/main.scss */
-h3 {
-  font-size: 1.17em;
-}
-
-/* line 22, ../sass/main.scss */
-h4 {
-  font-size: 0.95em;
-}
-
-/* line 26, ../sass/main.scss */
-.logo {
-  /* Float left */
-}
-
-/* line 30, ../sass/main.scss */
-.container {
-  /* Spacing: margin, padding */
-  padding: 10px;
-}
-
-/* line 35, ../sass/main.scss */
+/* MEDIA */
+/* line 1, ../sass/components/_header.scss */
 header {
   /*  static at top of page
          
@@ -114,21 +77,33 @@ header {
   text-align: center;
   padding-top: 10px;
 }
-/* line 43, ../sass/main.scss */
-header nav {
+/* line 9, ../sass/components/_header.scss */
+header .logo {
+  /* Float left */
+}
+
+/* line 1, ../sass/components/_nav.scss */
+nav {
   /*  large screen: one line menu 
       mobile: multi line menu
   */
   background-color: #00275e;
   margin-top: 10px;
 }
-/* line 49, ../sass/main.scss */
-header nav ul {
+/* line 7, ../sass/components/_nav.scss */
+nav ul {
   list-style: none;
   text-align: center;
+  padding-bottom: 2px;
 }
-/* line 52, ../sass/main.scss */
-header nav ul a {
+@media (min-width: 1024px) {
+  /* line 11, ../sass/components/_nav.scss */
+  nav ul li {
+    display: inline-block;
+  }
+}
+/* line 16, ../sass/components/_nav.scss */
+nav ul a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -136,31 +111,87 @@ header nav ul a {
   display: block;
   padding: 5px;
 }
-/* line 59, ../sass/main.scss */
-header nav ul a:hover {
+@media (min-width: 1024px) {
+  /* line 16, ../sass/components/_nav.scss */
+  nav ul a {
+    padding: 10px;
+  }
+}
+/* line 26, ../sass/components/_nav.scss */
+nav ul a:hover {
   background-color: #fff;
   color: #00275e;
-  border-bottom: 2px solid #00275e;
+  border-bottom: 2px solid transparent #00275e;
 }
 
-/* line 72, ../sass/main.scss */
-section {
-  background-color: #cfddf0;
-}
-/* line 74, ../sass/main.scss */
-section article {
-  /* margin top and bottom */
-}
-
-/* line 79, ../sass/main.scss */
+/* line 1, ../sass/components/_sidebar.scss */
 #sidebar {
   /* hidden by default */
   background-color: #4090ff;
   display: none;
 }
+@media (min-width: 1024px) {
+  /* line 1, ../sass/components/_sidebar.scss */
+  #sidebar {
+    display: block;
+  }
+}
 
-/* line 88, ../sass/main.scss */
+/* line 1, ../sass/components/_footer.scss */
 footer {
   background-color: #00275e;
   color: #fff;
+  clear: both;
+}
+
+/* GLOBAL STYLES */
+/* line 15, ../sass/main.scss */
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', Georgia, sans-serif;
+}
+
+/* line 20, ../sass/main.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 23, ../sass/main.scss */
+h2 {
+  font-size: 1.5em;
+}
+
+/* line 26, ../sass/main.scss */
+h3 {
+  font-size: 1.17em;
+}
+
+/* line 29, ../sass/main.scss */
+h4 {
+  font-size: 0.95em;
+}
+
+/* line 33, ../sass/main.scss */
+.container {
+  /* Spacing: margin, padding */
+  padding: 10px;
+}
+
+/* line 38, ../sass/main.scss */
+section {
+  background-color: #cfddf0;
+}
+/* line 40, ../sass/main.scss */
+section article {
+  /* margin top and bottom */
+}
+
+@media (min-width: 1024px) {
+  /* line 45, ../sass/main.scss */
+  .main-content {
+    background-color: #fff;
+    padding: 10px;
+    float: left;
+    width: 80%;
+  }
 }
