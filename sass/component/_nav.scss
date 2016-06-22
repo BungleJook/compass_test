@@ -1,0 +1,27 @@
+nav {
+    /*  large screen: one line menu 
+        mobile: multi line menu
+    */
+    background-color: $color-background-nav;
+    margin-top: 10px;
+    ul {
+        list-style: none;
+        text-align: center;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            display: block;
+            padding: 5px;
+            &:hover {
+                background-color: #fff;
+                color: $color-background-nav;
+                border-bottom: 2px solid $color-background-nav;
+            }
+            .active {
+
+            }
+        }
+    }
+}
