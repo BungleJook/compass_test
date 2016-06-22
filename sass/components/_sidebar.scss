@@ -2,6 +2,9 @@
     /* hidden by default */
     background-color: $color-background-sidebar;
     display: none;
+    @include desktop {
+        display: block;
+    }
     #book-list {
 
     }

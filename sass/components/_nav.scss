@@ -7,6 +7,12 @@ nav {
     ul {
         list-style: none;
         text-align: center;
+        padding-bottom: 2px;
+        li {
+            @include desktop {
+                display: inline-block;
+            }
+        }
         a {
             text-decoration: none;
             text-transform: uppercase;
@@ -14,10 +20,13 @@ nav {
             border: none;
             display: block;
             padding: 5px;
+            @include desktop {
+                padding: 10px;
+            }
             &:hover {
                 background-color: #fff;
                 color: $color-background-nav;
-                border-bottom: 2px solid $color-background-nav;
+                border-bottom: 2px solid transparent $color-background-nav;
             }
             .active {
 

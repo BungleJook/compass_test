@@ -2,17 +2,19 @@
 @import "compass/reset";
 @import "compass/css3";
 
-@import "helper/variables";
+@import "helpers/variables";
 
-@import "component/header";
-@import "component/nav";
-@import "component/sidebar";
-@import "component/footer";
+@import "mixins/media";
+
+@import "components/header";
+@import "components/nav";
+@import "components/sidebar";
+@import "components/footer";
 
 /* GLOBAL STYLES */
 body {
     background-color: $color-background-body;
-    font-family: Georgia, sans-serif;
+    font-family: 'Open Sans', Georgia, sans-serif;
 }
 
 h1 {
@@ -37,5 +39,14 @@ section {
     background-color: $color-background-content;
     article {
         /* margin top and bottom */
+    }
+}
+
+.main-content {
+    @include desktop {
+        background-color: #fff;
+        padding: 10px;
+        float: left;
+        width: 80%;
     }
 }
