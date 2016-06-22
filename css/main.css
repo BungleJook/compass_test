@@ -66,7 +66,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* FONT */
 /* COLOURS */
+/* COLUMNS */
 /* MEDIA */
+/* TRANSITIONS */
+/* line 2, ../sass/placeholders/_animation.scss */
+nav ul a, nav ul a:hover, #sidebar #book-list ul li a, #sidebar #book-list ul li a:hover {
+  transition: all 0.3s;
+}
+
 /* line 1, ../sass/components/_header.scss */
 header {
   /*  static at top of page
@@ -117,7 +124,7 @@ nav ul a {
     padding: 10px;
   }
 }
-/* line 26, ../sass/components/_nav.scss */
+/* line 27, ../sass/components/_nav.scss */
 nav ul a:hover {
   background-color: #fff;
   color: #00275e;
@@ -126,15 +133,38 @@ nav ul a:hover {
 
 /* line 1, ../sass/components/_sidebar.scss */
 #sidebar {
-  /* hidden by default */
-  background-color: #4090ff;
   display: none;
+  padding: 10px 0;
+  background: #4090ff;
+  border-left: 5px solid #000;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   /* line 1, ../sass/components/_sidebar.scss */
   #sidebar {
     display: block;
   }
+}
+/* line 12, ../sass/components/_sidebar.scss */
+#sidebar #book-list ul li {
+  padding: 0 20%;
+}
+/* line 14, ../sass/components/_sidebar.scss */
+#sidebar #book-list ul li a {
+  display: block;
+  padding: 10px 0;
+  margin: 25px 0;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+/* line 26, ../sass/components/_sidebar.scss */
+#sidebar #book-list ul li a:hover {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 /* line 1, ../sass/components/_footer.scss */
@@ -145,53 +175,57 @@ footer {
 }
 
 /* GLOBAL STYLES */
-/* line 15, ../sass/main.scss */
+/* line 17, ../sass/main.scss */
 body {
   background-color: #fff;
   font-family: 'Open Sans', Georgia, sans-serif;
 }
 
-/* line 20, ../sass/main.scss */
+/* line 22, ../sass/main.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 26, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 h3 {
   font-size: 1.17em;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 31, ../sass/main.scss */
 h4 {
   font-size: 0.95em;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 .container {
   /* Spacing: margin, padding */
   padding: 10px;
 }
 
-/* line 38, ../sass/main.scss */
-section {
-  background-color: #cfddf0;
-}
 /* line 40, ../sass/main.scss */
-section article {
-  /* margin top and bottom */
+section {
+  background: #fff;
+  display: flex;
 }
-
-@media (min-width: 1024px) {
-  /* line 45, ../sass/main.scss */
-  .main-content {
-    background-color: #fff;
-    padding: 10px;
-    float: left;
-    width: 80%;
-  }
+/* line 43, ../sass/main.scss */
+section .column {
+  margin: 0 5px;
+}
+/* line 46, ../sass/main.scss */
+section .main {
+  flex-grow: 5;
+  flex-shrink: 5;
+  flex-basis: 0;
+}
+/* line 51, ../sass/main.scss */
+section #sidebar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  margin-right: 0;
 }
